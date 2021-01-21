@@ -1,0 +1,22 @@
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h1 class="text-center text-white">Sign Up</h1>
+        <%= form_for @user do |f| %> <!--userクラスのインスタンス, form_for モデル do |f|とendで囲むことでモデル<@user>のフォームを作成-->
+          <div class="form-group">
+            <%= f.label :name, class: 'text-white' %> <!--labelタグを作成, name = カラム-->
+            <%= f.text_field :name, class: 'form-control' %> <!--テキスト投稿フォームを作成, name = カラム-->
+          </div>
+          <div class="form-group">
+            <%= f.label :email, class: 'text-white' %> <!--lebelタグを作成, email = カラム-->
+            <%= f.text_field :email, class: 'form-control' %> <!--テキスト投稿フォームを作成, email = カラム-->
+         </div>
+         
+         <%= f.submit "登録", class: 'btn-block btn-white' %> <!--送信ボタンを作成<登録>-->
+       <% end %>
+       <%= link_to 'ログインはこちら', '#' class: 'text-white' %>
+     </div>
+    </div>
+  </div>
+</div>
