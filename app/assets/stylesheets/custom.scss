@@ -1,0 +1,93 @@
+h1, h2 {
+  /* フォントの太さを指定 */
+  font-weight: 100;
+  font-family: 'Teko', sans-serif;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.btn-white {
+  color: #fff;
+  /* 枠線の太さ 種類 色 */
+  border: 3px solid #fff;
+  /* paddingはborderの内側の余白を作る */
+  padding-top: 15px;
+  /* paddingはborderの内側の余白を作る */
+  padding-bottom: 15px;
+  font-size: 30px;
+  /* 透明化 */
+  background-color: rgba(0,0,0,0.0);
+  
+  /* & = 親セレクタを参照する :hover = カーソルが乗っている要素にスタイルを適応 */
+  &:hover {
+    color: #fff;
+  }
+}
+
+.top-hero-wrapper {
+  /* vw = View Width*/
+  width: 100vw;
+  /* vh = View Height*/
+  height: 100vh;
+  /* 背景画像を指定<imageディレクトリ> */
+  background-image: url('juventus_stadium.jpg');
+  /* 背景画像の初期位置を中央に配置(横) */
+  background-position: center;
+  /* 背景画像を繰り返し描写されないよう設定 */
+  background-repeat: no-repeat;
+  /* 背景画像の位置を固定 */
+  background-attachment: fixed;
+  /* 背景画像のサイズを指定,画像の縦横比を崩すことなく画像ができるだけ大きくなるよう拡大縮小 */
+  background-size: cover;
+  background-color: #464646;
+}
+
+.top-hero-container {
+  /* paddingはborderの内側に余白を作る */
+  padding-top: 220px;
+  h1 {
+    font-size: 56px;
+    /* borderの外側に余白を作る */
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 46px;
+    /* borderの外側に余白を作る */
+    margin-bottom: 60px;
+  }
+}
+
+.form-control {
+  height: 50px;
+}
+
+.users-new-wrapper {
+  /* vw = View Width */
+  width: 100vw;
+  /* vh = View Height*/
+  height: 100vh;
+  /* 背景画像を指定<imageディレクトリ> */
+  background-image: image-url('juventus_stadium.jpg');
+  /* 背景画像の初期位置を中央に配置(横,縦) */
+  background-position: center center;
+   /* 背景画像を繰り返し描写されないよう設定 */
+  background-repeat: no-repeat;
+  /* 背景画像の位置を固定 */
+  background-attachment: fixed;
+  /* 背景画像のサイズを指定,画像の縦横比を崩すことなく画像ができるだけ大きくなるよう拡大縮小 */
+  background-size: cover;
+  background-color: #464646;
+  
+  .users-new-container {
+    /* paddingはborderの内側に余白を作る */
+    padding-top: 220px;
+    
+    .form-group {
+      /* borderの外側に余白を作る */
+      margin-bottom: 20px;
+    }
+  }
+}
