@@ -1,0 +1,21 @@
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h1 class="text-center text-white">Log In</h1>
+        <%= form_for :session, url: login_path do |f| %> <!--Sessionはデータベースにデータを保存するわけではないため, モデルを作る必要がない, URLを指定し意図したURLにリクエスト-->
+          <div class="form-group">
+            <%= f.label :email, class: "text-white" %> <!--labelタグを作成, email = カラム-->
+            <%= f.text_field :email, class: "form-control" %> <!--テキスト投稿フォームを作成, email = カラム-->
+          </div>
+          <div class="form-group">
+            <%= f.label :password, class: "text-white" %> <!--labelタグを作成, password = カラム-->
+            <%= f.password_field :password, class: "form-control" %> <!--パスワード入力フォームを作成, password = カラム-->
+          </div>
+        
+          <%= f.submit "ログイン", class: "btn-block btn-white" %> <!--送信ボタンを作成<ログイン>-->
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
