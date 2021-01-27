@@ -12,10 +12,18 @@
             <%= f.label :email, class: 'text-white' %> <!--lebelタグを作成, email = カラム-->
             <%= f.text_field :email, class: 'form-control' %> <!--テキスト投稿フォームを作成, email = カラム-->
          </div>
+         <div class="form-group">
+           <%= f.label :password, class: 'text-white' %> <!--labelタグを作成, password = カラム-->
+           <%= f.password_field :password, class: 'form-control' %> <!--パスワード入力フォームを作成, password = カラム-->
+         </div>
+         <div class="form-group">
+           <%= f.label :password_confirmation, class: 'text-white' %> <!--labelタグを作成, password_confirmation = カラム-->
+           <%= f.password_field :password_confirmation, class: 'form-control' %> <!--パスワード入力フォームを作成, password_confirmation = カラム-->
+         </div>
          
          <%= f.submit "登録", class: 'btn-block btn-white' %> <!--送信ボタンを作成<登録>-->
        <% end %>
-       <%= link_to 'ログインはこちら', '#' class: 'text-white' %>
+       <%= link_to 'ログインはこちら', '#', class: 'text-white' %> <!--link_to 名前 Path-->
      </div>
     </div>
   </div>
