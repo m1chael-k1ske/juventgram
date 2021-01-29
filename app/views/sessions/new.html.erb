@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-offset-4 col-md-4 users-new-container">
         <h1 class="text-center text-white">Log In</h1>
-        <%= form_for :session, url: login_path do |f| %> <!--Sessionはデータベースにデータを保存するわけではないため, モデルを作る必要がない, URLを指定し意図したURLにリクエスト-->
+        <%= form_for :session, url: login_path do |f| %> <!--Sessionはデータベースにデータを保存するわけではないため, モデルを作る必要がない, オプションでURLを指定しなければならない-->
           <div class="form-group">
             <%= f.label :email, class: "text-white" %> <!--labelタグを作成, email = カラム-->
             <%= f.text_field :email, class: "form-control" %> <!--テキスト投稿フォームを作成, email = カラム-->
