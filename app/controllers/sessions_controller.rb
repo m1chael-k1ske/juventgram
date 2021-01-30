@@ -2,9 +2,9 @@ class SessionsController < ApplicationController
   def new
   end
   
-  def create
-    user = User.find_by(email: params[:session][:email])
-    if user && user.authenticate(params[:session][:password])
+  def create # # Sessionはモデルを持たないため, インスタンス変数の@userを代入する必要がない
+    user = User.find_by(email: params[:session][:email]) # フォームから送信されたメールアドレスを取得し, 一致するユーザーがいるか検索<find_byメソッド>
+    if user && user.authenticate(params[:session][:password]) # 該当のメールアドレスをもつuserが存在し, かつuserのパスワードが正しい, <authenticateメソッド = パスワードを引数としてユーザーの認証を行うことができる>
       log_in user
       redirect_to root_path, success: 'ログインに成功しました'
     else
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
   
   private
-  def log_in(user)
-    session[:user_id] = user.id
+  def log_in(user) # log_inメソッドでsession[:user_id]にログイン情報を保存
+    session[:user_id] = user.id # sessionメソッド<sessionに暗号化した情報を保存するメソッド>
   end
 end
