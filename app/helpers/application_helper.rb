@@ -6,7 +6,7 @@ module ApplicationHelper
     # session[:user_id]」は, ログイン中のユーザーのidを取得
   end
   
-  def logged_in?
+  def logged_in? # logged_in?メソッドは現在のユーザーがログインしているかどうか判別するメソッド
     !current_user.nil? # current_userがnilか判断
     # current_userメソッド内にあるインスタンス変数内に情報があればログイン, なければログアウト状態となる
   end
