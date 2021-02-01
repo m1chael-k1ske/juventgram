@@ -1,4 +1,4 @@
-module ApplicationHelper
+module ApplicationHelper # application_helperなどのhelperはViewで使用する共通のコードを指定
   def current_user # current_userとは現在ログインしているユーザーの情報を簡単に取得できるメソッド
     @current_user ||= User.find_by(id: session[:user_id]) # インスタンス変数がfalse(nil)の場合Userモデルから現在ログインしているユーザーidと一致する情報を代入
     # ||= は代入演算子で「左辺がFalse（nilまたは偽）の場合に右辺の値を左辺に代入」と言う意味
