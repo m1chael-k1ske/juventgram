@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base # application_controllerはcontrollerで使用する共通のコードを指定
   protect_from_forgery with: :exception # クロスサイトリクエストフォージェリ<Railsのセキュリティ対策に必要な一文>
 
   add_flash_types :success, :info, :warning, :danger # フラッシュメッセージのキーを許可
