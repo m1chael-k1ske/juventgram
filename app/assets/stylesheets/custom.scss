@@ -91,3 +91,32 @@ h1, h2 {
     }
   }
 }
+
+.alert {
+  /* borderの外側に余白を作る */
+  margin-bottom: 0px;
+  /* 配置指定, スクロールしても位置が固定 */
+  position: fixed;
+  width: 100%;
+  z-index: 10000; /* 親要素の重なりを順を指定 */
+}
+
+.navbar-transparent {
+  /* borderの外側に余白を作る */
+  margin-botom: 0px;
+  background-color: rgba(0,0,0,0.5);
+  a { /* リンクの色を変えるためにセレクタにaを指定 */
+    color: #fff !important; /* 適用されるスタイル優先順位を最優先に */
+  }
+  
+  .navbar-brand {
+    /* borderの内側に余白を作る */
+    padding: 0px;
+    /* borderの外側に余白を作る */
+    margin-top: 15px;
+  }
+  
+  img {
+    height: 40px;
+  }
+}
