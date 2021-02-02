@@ -14,13 +14,13 @@
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
     
-    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent"> <!--ナビゲーションバー, 背景白ベースのナビゲーションバーを使用, ナビゲーションバーを上部に配置, ナビゲーションバーを透明化-->
       <div class="container">
         <%= link_to root_path do %>
-          <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span>
+          <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span> <!--navbar-brandはブランドを表示-->
         <% end %>
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
+        <ul class="nav navbar-nav navbar-right"> <!--navでナビゲーションバー(navbar-nav)を使用するという指定, ナビゲーションバーを右揃え-->
+          <% if logged_in? %> <!--ログインユーザー用のリンク↓-->
             <li>
               <%= link_to "#" do %>
                 <%= image_tag "icons/heart.png" %>
@@ -36,7 +36,7 @@
                 <%= image_tag "icons/logout.png" %>
               <% end %>
             </li>
-          <% else %>
+          <% else %> <!--ログインしていないユーザー用のリンク-->
             <li>
               <%= link_to new_user_path do %>
                 <%= image_tag "icons/register.png" %>
