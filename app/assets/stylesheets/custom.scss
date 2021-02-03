@@ -117,6 +117,7 @@ h1, h2 {
   }
   
   img {
+    width: auto; /* ブラウザが計算して自動確定 */
     height: 40px;
   }
 }
