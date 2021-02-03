@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     end
   end
   
-  def destroy
+  def destroy # ユーザー情報を削除
     log_out
     redirect_to root_url, info: 'ログアウトしました'
   end
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
   end
   
   def log_out
-    session.delete(:user_id)
-    @current_user = nil
+    session.delete(:user_id) # sessionの中にあるユーザー情報を削除
+    @current_user = nil # @current_userの中には, ログインしているユーザーが残ったままなのでnilを代入し, ユーザー情報を削除
   end
 end
