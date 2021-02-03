@@ -13,8 +13,18 @@ class SessionsController < ApplicationController
     end
   end
   
+  def destroy
+    log_out
+    redirect_to root_url, info: 'ログアウトしました'
+  end
+  
   private
   def log_in(user) # log_inメソッドでsession[:user_id]にログイン情報を保存
     session[:user_id] = user.id # sessionメソッド<sessionに暗号化した情報を保存するメソッド>
+  end
+  
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
   end
 end
