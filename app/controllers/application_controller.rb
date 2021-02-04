@@ -10,4 +10,6 @@ class ApplicationController < ActionController::Base # application_controllerは
   def logged_in? # # logged_in?メソッドは現在のユーザーがログインしているかどうか判別するメソッド
     !current_user.nil? # current_userがnilか判断
   end
+  
+  helper_method :current_user, :logged_in? # 重複コードの対策
 end
