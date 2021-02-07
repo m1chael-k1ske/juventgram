@@ -1,6 +1,5 @@
 h1, h2 {
-  /* フォントの太さを指定 */
-  font-weight: 100;
+  font-weight: 100;  /*フォントの太さを指定*/
   font-family: 'Teko', sans-serif;
 }
 
@@ -10,53 +9,38 @@ h1, h2 {
 
 .btn-white {
   color: #fff;
-  /* 枠線の太さ 種類 色 */
-  border: 3px solid #fff;
-  /* paddingはborderの内側の余白を作る */
-  padding-top: 15px;
-  /* paddingはborderの内側の余白を作る */
-  padding-bottom: 15px;
+  border: 3px solid #fff; /*枠線の太さ 種類 色*/
+  padding-top: 15px; /*paddingはborderの内側の余白を作る*/
+  padding-bottom: 15px; /*paddingはborderの内側の余白を作る*/
   font-size: 30px;
-  /* 透明化 */
-  background-color: rgba(0,0,0,0.0);
+  background-color: rgba(0,0,0,0.0); /*透明化*/
   
-  /* & = 親セレクタを参照する :hover = カーソルが乗っている要素にスタイルを適応 */
-  &:hover {
+  &:hover { /*& = 親セレクタを参照する :hover = カーソルが乗っている要素にスタイルを適応*/
     color: #fff;
   }
 }
 
 .top-hero-wrapper {
-  /* vw = View Width*/
-  width: 100vw;
-  /* vh = View Height*/
-  height: 100vh;
-  /* 背景画像を指定<imageディレクトリ> */
-  background-image: url('juventus_stadium.jpg');
-  /* 背景画像の初期位置を中央に配置(横) */
-  background-position: center;
-  /* 背景画像を繰り返し描写されないよう設定 */
-  background-repeat: no-repeat;
-  /* 背景画像の位置を固定 */
-  background-attachment: fixed;
-  /* 背景画像のサイズを指定,画像の縦横比を崩すことなく画像ができるだけ大きくなるよう拡大縮小 */
-  background-size: cover;
+  width: 100vw; /*vw = View Width*/
+  height: 100vh; /*vh = View Height*/
+  background-image: url('juventus_stadium.jpg');  /*背景画像を指定<imageディレクトリ>*/
+  background-position: center; /*背景画像の初期位置を中央に配置(横)*/
+  background-repeat: no-repeat; /*背景画像を繰り返し描写されないよう設定*/
+  background-attachment: fixed; /*背景画像の位置を固定*/
+  background-size: cover; /*背景画像のサイズを指定,画像の縦横比を崩すことなく画像ができるだけ大きくなるよう拡大縮小*/
   background-color: #464646;
 }
 
 .top-hero-container {
-  /* paddingはborderの内側に余白を作る */
-  padding-top: 220px;
+  padding-top: 220px; /*paddingはborderの内側に余白を作る*/
   h1 {
     font-size: 56px;
-    /* borderの外側に余白を作る */
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*borderの外側に余白を作る*/
   }
   
   h2 {
     font-size: 46px;
-    /* borderの外側に余白を作る */
-    margin-bottom: 60px;
+    margin-bottom: 60px; /*borderの外側に余白を作る*/
   }
 }
 
@@ -65,59 +49,96 @@ h1, h2 {
 }
 
 .users-new-wrapper {
-  /* vw = View Width */
-  width: 100vw;
-  /* vh = View Height*/
-  height: 100vh;
-  /* 背景画像を指定<imageディレクトリ> */
-  background-image: image-url('juventus_stadium.jpg');
-  /* 背景画像の初期位置を中央に配置(横,縦) */
-  background-position: center center;
-   /* 背景画像を繰り返し描写されないよう設定 */
-  background-repeat: no-repeat;
-  /* 背景画像の位置を固定 */
-  background-attachment: fixed;
-  /* 背景画像のサイズを指定,画像の縦横比を崩すことなく画像ができるだけ大きくなるよう拡大縮小 */
-  background-size: cover;
+  width: 100vw; /*vw = View Width*/
+  height: 100vh; /*vh = View Height*/
+  background-image: image-url('juventus_stadium.jpg');  /*背景画像を指定<imageディレクトリ>*/
+  background-position: center center; /*背景画像の初期位置を中央に配置(横,縦)*/
+  background-repeat: no-repeat; /*背景画像を繰り返し描写されないよう設定*/
+  background-attachment: fixed; /*背景画像の位置を固定*/
+  background-size: cover; /*背景画像のサイズを指定,画像の縦横比を崩すことなく画像ができるだけ大きくなるよう拡大縮小*/
   background-color: #464646;
   
   .users-new-container {
-    /* paddingはborderの内側に余白を作る */
-    padding-top: 220px;
+    padding-top: 220px; /*paddingはborderの内側に余白を作る*/
     
     .form-group {
-      /* borderの外側に余白を作る */
-      margin-bottom: 20px;
+      margin-bottom: 20px; /*borderの外側に余白を作る*/
     }
   }
 }
 
 .alert {
-  /* borderの外側に余白を作る */
-  margin-bottom: 0px;
-  /* 配置指定, スクロールしても位置が固定 */
-  position: fixed;
+  margin-bottom: 0px; /*borderの外側に余白を作る*/
+  position: fixed; /*配置指定, スクロールしても位置が固定*/
   width: 100%;
-  z-index: 10000; /* 親要素の重なりを順を指定 */
+  z-index: 10000; /*親要素の重なりを順を指定*/
 }
 
 .navbar-transparent {
-  /* borderの外側に余白を作る */
-  margin-botom: 0px;
+  margin-botom: 0px; /*borderの外側に余白を作る*/
   background-color: rgba(0,0,0,0.5);
-  a { /* リンクの色を変えるためにセレクタにaを指定 */
-    color: #fff !important; /* 適用されるスタイル優先順位を最優先に */
+  a { /*リンクの色を変えるためにセレクタにaを指定*/
+    color: #fff !important; /*適用されるスタイル優先順位を最優先に*/
   }
   
   .navbar-brand {
-    /* borderの内側に余白を作る */
-    padding: 0px;
-    /* borderの外側に余白を作る */
-    margin-top: 15px;
+    padding: 0px; /*borderの内側に余白を作る*/
+    margin-top: 15px; /*borderの外側に余白を作る*/
   }
   
   img {
-    width: auto; /* ブラウザが計算して自動確定 */
+    width: auto; /*ブラウザが計算して自動確定*/
     height: 40px;
+  }
+}
+
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656; /*枠線 太さ 種類 色*/
+  padding-top: 15px; /*borderの内側に余白を作る*/
+  padding-bottom: 15px; /*borderの内側に余白を作る*/
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0); /*透明化*/
+  
+  &:hover { /*& = 親セレクタを参照する :hover = カーソルが乗っている要素にスタイルを適応*/
+    color: #565656;
+  }
+}
+
+.topic-new-wrapper {
+  padding-top: 120px; /*borderの内側に余白を作る*/
+}
+
+.topic-index-wrapper {
+  padding-top: 70px; /*borderの内側に余白を作る*/
+  background-color: #fafafa;
+  .topic-index-single {
+    background-color: #fff;
+    padding-top: 20px; /*borderの内側に余白を作る*/
+    padding-bottom: 20px; /*borderの内側に余白を作る*/
+    margin-top: 30px; /*borderの外側に余白を作る*/
+    border: 1px solid #e6ecf0; /*枠線 太さ 種類 色*/
+    border-radius: 3px; /*borderの角丸を指定*/
+    .topic-author {
+      padding-right: 20px; /*borderの内側に余白を作る*/
+      padding-left: 20px; /*borderの内側に余白を作る*/
+    }
+    
+    .topic-text {
+      padding-right: 20px; /*borderの内側に余白を作る*/
+      padding-left: 20px; /*borderの内側に余白を作る*/
+    }
+    
+    img {
+      margin-top: 10px; /*borderの外側に余白を作る*/
+      margin-bottom: 20px; /*borderの外側に余白を作る*/
+      width: 100%;
+    }
+    
+    .topic-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px; /*borderの外側に余白を作る*/
+     }
   }
 }
