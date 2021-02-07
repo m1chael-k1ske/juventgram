@@ -5,4 +5,5 @@ class User < ApplicationRecord # ApplicationRecord<Railsの基礎的なクラス
   has_secure_password # has_secure_passwordを記述した事で, Userモデルでpasswordとpassword_confirmationの2つが使えるようになり, DB内のpassword_digestに保存, その後gemfileにgem'bcrypt'を記述インストール
   
   has_many :topics # アソシエーション 1つのUserは複数のTopicを持つ
+  has_many :favorites # アソシエーション 1つのUserは複数のFavoriteを持つ
 end
