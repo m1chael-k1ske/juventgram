@@ -6,4 +6,6 @@ class Topic < ApplicationRecord
   belongs_to :user # アソシエーション それぞれのTopicは1つのUserを持つ
   
   mount_uploader :image, ImageUploader
+  
+  has_many :favorites # # アソシエーション 1つのTopicは複数のFavoriteを持つ
 end
