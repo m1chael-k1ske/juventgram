@@ -4,7 +4,11 @@ class TopicsController < ApplicationController
   end
   
   def new
-    @topic = Topic.new # form_forに渡すインスタンス変数(@topic) newメソッドで何も情報を持っていないので自動的にcreateアクションへ
+    if logged_in? # ログイン状態でのみnewアクションにアクセス出来るように条件分岐
+      @topic = Topic.new # form_forに渡すインスタンス変数(@topic) newメソッドで何も情報を持っていないので自動的にcreateアクションへ
+    else
+      redirect_to login_path, info: 'ログインして下さい' # info = 青
+    end
   end
   
   def create # createアクションでリソースを追加しsaveメソッドを使用(保存), Controllerで保存されたインスタンス変数は,そのControllerに紐づくViewに値が渡される
