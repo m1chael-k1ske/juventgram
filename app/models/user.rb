@@ -6,4 +6,5 @@ class User < ApplicationRecord # ApplicationRecord<Railsの基礎的なクラス
   
   has_many :topics # アソシエーション 1つのUserは複数のTopicを持つ
   has_many :favorites # アソシエーション 1つのUserは複数のFavoriteを持つ
+  has_many :favorite_topics, through: :favorites, source: 'topic' # through(中間テーブル)を使うことで, ログインしているユーザーがいいねしているTopicを全て取得
 end
