@@ -17,17 +17,17 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent"> <!--ナビゲーションバー, 背景白ベースのナビゲーションバーを使用, ナビゲーションバーを上部に配置, ナビゲーションバーを透明化-->
       <div class="container">
         <%= link_to root_path do %>
-          <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span> <!--navbar-brandはブランドを表示-->
+          <span><%= image_tag "icons/juventus_logo_3.png", class: "navbar-brand" %></span> <!--navbar-brandはブランドを表示-->
         <% end %>
         <ul class="nav navbar-nav navbar-right"> <!--navでナビゲーションバー(navbar-nav)を使用するという指定, ナビゲーションバーを右揃え-->
           <% if logged_in? %> <!--ログインユーザー用のリンク↓-->
             <li>
-              <%= link_to "#" do %>
+              <%= link_to favorites_index_path do %>
                 <%= image_tag "icons/heart.png" %>
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to new_topic_path do %>
                 <%= image_tag "icons/camera.png" %>
               <% end %>
             </li>
