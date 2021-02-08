@@ -8,4 +8,5 @@ class Topic < ApplicationRecord
   mount_uploader :image, ImageUploader
   
   has_many :favorites # # アソシエーション 1つのTopicは複数のFavoriteを持つ
+  has_many :favorite_users, through: :favorites, source: 'user' # through(中間テーブル)を使うことで, Topicをいいねしている全てのUserを取得
 end
