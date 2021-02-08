@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   get 'favorites/index' # path get = 取得
   post '/favorites', to: 'favorites#create' # post = 取得　path controller#action
   delete '/favorites', to: 'favorites#destroy' # delete = 削除 path controller#action
+  
+  get '/comments/:topic_id/new', to: 'comments#new', as: 'comments' # asを使い, ルーティングに名前を指定 comments_path
+  post '/comments/:topic_id/create', to: 'comments#create', as: 'comments_create' # asを使い, ルーティングに名前を指定 comments_create_path
+  resources :comments # まとめて定義
 end
