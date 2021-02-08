@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new' # ログインするためのフォームを表示するページを取得, 転送<GET /URL sessions_controller_new_action>
   post   '/login',   to: 'sessions#create'# メールアドレス, パスワードを送信してもらい, データを元にSessionを作成, 処理を振り分け<POST /URL sessions_controller_create_action>
   delete '/logout',  to: 'sessions#destroy'# ログアウトでSessionを削除に処理を振り分け<DELETE /URL sessions_controller_destroy_action>
+  
+  get 'favorites/index' # path get = 取得
+  post '/favorites', to: 'favorites#create' # post = 取得　path controller#action
+  delete '/favorites', to: 'favorites#destroy' # delete = 削除 path controller#action
 end
