@@ -13,9 +13,9 @@
               <%= topic.description %> <!--画像の概要を表示-->
             </p>
             <h3>コメント</h3>
-              <% topic.comments.each do |comment| %>
+              <% topic.comments.each do |comment| %> <!--topic.commentsでそのtopicのコメントを取得-->
               <p class="topic-text">
-                <%= comment.content %>
+                <%= comment.content %> <!--commentのcontent(カラム)-->
               </p>
               <% end %>
           </div>
