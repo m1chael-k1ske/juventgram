@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   def index # indexアクションを作成(リソース一覧を表示)
-    @topics = Topic.all # View(index.html.erb)を作成, 投稿一覧を表示できる
+    @topics = Topic.all.includes(:favorite_users) # View(index.html.erb)を作成, 投稿一覧を表示できる
   end
   
   def new
