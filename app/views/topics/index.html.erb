@@ -8,11 +8,28 @@
               <%= topic.user.name %> <!--TopicモデルとUserモデルは紐付いているので, topic.user.nameとすることでそのuserのnameプロパティが呼み出せる-->
             </h2>
             <%= image_tag topic.image.url %> <!--投稿された画像を表示-->
-            <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
-            <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <% if !topic.favorite_users.include?(current_user) %> <!--このTopicにログインしているユーザーのid(favorite_users)が存在しなかったら (includes? = 存在しているか確認する時に使う)-->
+              <%= link_to favorites_path(topic_id: topic.id), method: :post do %> <!--pathにシンボルを与えて, link_toにパラメーターを渡す, params[:topic_id]にtopic.idが入る, routesにあるfavorites#createアクションに遷移した時に, いいねしたTopicのidを取得-->
+                <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
+              <% end %>
+            <% else %>
+              <%= link_to favorites_path(topic_id: topic.id), method: :delete do %> <!--favorites#destroyアクションに遷移した時に, ハートをクリックするとfavoriteテーブルからカラムを削除-->
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              <% end %>
+            <% end %>
+            <%= topic.favorite_users.count %> <!--いいねされた数を表示-->
+              <%= link_to comments_path(topic_id: topic.id) do %>
+                <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+              <% end %>
             <p class="topic-text">
               <%= topic.description %> <!--画像の概要を表示-->
             </p>
+            <h3>コメント</h3>
+              <% topic.comments.each do |comment| %> <!--topic.commentsでそのtopicのコメントを取得-->
+            <p class="topic-text">
+              <%= comment.content %> <!--commentのcontent(カラム)-->
+            </p>
+              <% end %>
           </div>
         </div>
       </div>
