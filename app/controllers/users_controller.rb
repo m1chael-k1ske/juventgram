@@ -7,7 +7,7 @@ class UsersController < ApplicationController #Railsの慣習でControllerは必
     @user = User.new(user_params)
     
     if @user.save
-      redirect_to rooth_path, success: '登録が完了しました' # success = 緑
+      redirect_to root_path, success: '登録が完了しました' # success = 緑
     else
       flash.now[:danger] = "登録に失敗しました" # danger = 赤
       render :new # 表示したいビュー(usersディレクトリ内のnew.html.erbが表示)
